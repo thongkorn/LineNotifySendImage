@@ -28,7 +28,9 @@ Public Class frmLineNotify
     Const strToken As String = "TOKEN"
 
     Private Sub frmLineNotify_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        '// กรณีใช้ .Net Framework ต่ำกว่าเวอร์ชั่น 4.6 ต้องเพิ่มคำสั่งนี้เข้าไป หากสูงกว่าก็ตัดชุดคำสั่งนี้ออกไปได้เลย
         System.Net.ServicePointManager.SecurityProtocol = DirectCast(3072, System.Net.SecurityProtocolType)
+        '//
         txtMessage.Text = "ทดสอบการส่ง Line Notify จากคุณทองก้อน ทับทิมกรอบ"
         picData.Image = Image.FromFile(PicturePath & "NoImage.gif")
     End Sub
