@@ -28,6 +28,7 @@ Public Class frmLineNotify
     Const strToken As String = "TOKEN"
 
     Private Sub frmLineNotify_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        System.Net.ServicePointManager.SecurityProtocol = DirectCast(3072, System.Net.SecurityProtocolType)
         txtMessage.Text = "ทดสอบการส่ง Line Notify จากคุณทองก้อน ทับทิมกรอบ"
         picData.Image = Image.FromFile(PicturePath & "NoImage.gif")
     End Sub
